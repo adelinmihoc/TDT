@@ -1,10 +1,11 @@
-package org.example.features;
+package org.example.features.Doris;
 
 import net.thucydides.core.annotations.Steps;
+import org.example.features.BaseStory;
 import org.example.steps.serenity.ContactUsSteps;
 import org.junit.Test;
 
-public class ContactUsStory extends BaseStory{
+public class ContactUsStory extends BaseStory {
 
     @Steps
     private ContactUsSteps contactUsSteps;

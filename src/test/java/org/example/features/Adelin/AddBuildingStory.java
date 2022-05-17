@@ -1,6 +1,7 @@
-package org.example.features;
+package org.example.features.Adelin;
 
 import net.thucydides.core.annotations.Steps;
+import org.example.features.BaseStory;
 import org.example.steps.serenity.AddBuildingSteps;
 import org.junit.Test;
 
