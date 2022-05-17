@@ -21,5 +21,6 @@ public class AddBuildingStory extends BaseStory {
         addBuildingSteps.enterSafeDistance("150");
         Thread.sleep(2000);
         addBuildingSteps.submit();
+        Thread.sleep(2000);
     }
 }
