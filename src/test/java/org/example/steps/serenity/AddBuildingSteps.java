@@ -1,7 +1,12 @@
 package org.example.steps.serenity;
 
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 import org.example.pages.AddBuildingPage;
+
+import java.util.stream.Collectors;
+
+import static org.codehaus.groovy.runtime.DefaultGroovyMethods.findAll;
 
 public class AddBuildingSteps {
 
@@ -32,11 +37,23 @@ public class AddBuildingSteps {
         addBuildingPage.open();
     }
 
-    public void addBuilding(String buildingName, String safeDistance) {
+    @Step
+    public void clickPaginationUntilDisable() throws InterruptedException {
+        addBuildingPage.clickPaginationUntilDisabled();
+    }
+
+    @Step
+    public void checkAddBuilding(String name, String distance) {
+        addBuildingPage.checkLastEntry(name, distance);
+    }
+
+    public void addBuilding(String buildingName, String safeDistance) throws InterruptedException {
         clickAddBuilding();
         enterBuildingName(buildingName);
         enterSafeDistance(safeDistance);
         submit();
+        clickPaginationUntilDisable();
+        checkAddBuilding(buildingName, safeDistance);
     }
 
 }

@@ -17,11 +17,6 @@ public class AddBuildingStory extends BaseStory {
         Thread.sleep(2000);
         addBuildingSteps.isTheAddBuildingPage();
         Thread.sleep(2000);
-        addBuildingSteps.clickAddBuilding();
-        addBuildingSteps.enterBuildingName("hehehehe");
-        addBuildingSteps.enterSafeDistance("150");
-        Thread.sleep(2000);
-        addBuildingSteps.submit();
-        Thread.sleep(10000);
+        addBuildingSteps.addBuilding("hihihi", "120");
     }
 }
