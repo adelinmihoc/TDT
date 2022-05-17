@@ -85,6 +85,8 @@ public class LoginSteps {
             robot.keyRelease(KeyEvent.VK_ENTER);
         } catch (AWTException exception){
             System.out.println("Robot exception");
+        } catch (InterruptedException e) {
+            System.out.println("Sleep exception");
         }
         catch (InterruptedException exp){
 
