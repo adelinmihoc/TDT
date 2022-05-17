@@ -32,10 +32,17 @@ public class ContactUsSteps {
         contactUsPage.open();
     }
 
-    public void contactUs(String subject, String description){
+    @Step
+    public void displayMessage() {
+        contactUsPage.displayMessage();
+    }
+
+    public void contactUs(String subject, String description) throws InterruptedException {
         enterSubject(subject);
         enterDescription(description);
         submit();
+        Thread.sleep(1000);
+        displayMessage();
     }
 
 

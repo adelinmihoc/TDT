@@ -16,10 +16,11 @@ public class ContactUsStory extends BaseStory{
         Thread.sleep(2000);
         contactUsSteps.isTheContactUsPage();
         Thread.sleep(2000);
-        contactUsSteps.enterSubject("Reporting bugs");
-        contactUsSteps.enterDescription("Found a bug here! Error when clicking on submit");
-        Thread.sleep(2000);
-        contactUsSteps.submit();
+        contactUsSteps.contactUs("hhhhh", "asdasssssssssssssss");
+//        contactUsSteps.enterSubject("Reporting bugs");
+//        contactUsSteps.enterDescription("Found a bug here! Error when clicking on submit");
+//        Thread.sleep(2000);
+//        contactUsSteps.submit();
     }
 
 }
