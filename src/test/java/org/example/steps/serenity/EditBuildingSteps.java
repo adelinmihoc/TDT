@@ -38,11 +38,13 @@ public class EditBuildingSteps {
         page.saveEditedInformation();
     }
 
-    public void SaveNewBuildingInformation(String name,String dist){
+    public void SaveNewBuildingInformation(String name,String dist) throws InterruptedException {
         selectOptions();
+        Thread.sleep(1000);
         selectEditOption();
         eneterNewBuildingName(name);
         enterNewSafeDistance(dist);
+        Thread.sleep(1000);
         pushSaveButton();
 
     }

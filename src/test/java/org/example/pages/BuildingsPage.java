@@ -5,33 +5,35 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.Keys;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("https://lighthouse-demo.evozon.com/buildings")
 public class BuildingsPage extends PageObject {
 
-   // @FindBy(className = "MuiButtonBase-root MuiIconButton-root jss316")
-    //private WebElementFacade optionsButton ;
-
-
-    @FindBy(className = "MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button")
-    private WebElementFacade editButton;
-
-    @FindBy(id = "MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl.label")
+    @FindBy(name = "label")
     private WebElementFacade editBuildingNameInput;
 
-    @FindBy(id = "MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl.safeDistance")
+    @FindBy(name = "safeDistance")
     private WebElementFacade editDistanceInput;
 
-    @FindBy(className = "MuiButtonBase-root MuiButton-root MuiButton-contained jss341 MuiButton-containedPrimary")
-    private WebElementFacade saveEditedDataButton;
-
     public void pushOptionsButton(){
-        WebElementFacade optionsButton=find(By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root jss235']"));
+        WebElementFacade optionsButton=find(By.cssSelector("td.MuiTableCell-alignRight")).then(By.cssSelector("button.MuiIconButton-root"));
         optionsButton.click();
     }
 
     public void selectEditOption(){
-        editButton.click();
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+        } catch (AWTException exception) {
+            System.out.println("asd");
+        }
+
     }
 
     public void enterNewBuildingName(String name){
@@ -43,6 +45,7 @@ public class BuildingsPage extends PageObject {
     }
 
     public void saveEditedInformation(){
+        WebElementFacade saveEditedDataButton=find(By.cssSelector("div.MuiGrid-root")).then(By.cssSelector("button.MuiButton-contained"));
         saveEditedDataButton.click();
     }
 

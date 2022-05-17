@@ -88,9 +88,6 @@ public class LoginSteps {
         } catch (InterruptedException e) {
             System.out.println("Sleep exception");
         }
-        catch (InterruptedException exp){
-
-        }
     }
 
     public void login(String username, String password) {
