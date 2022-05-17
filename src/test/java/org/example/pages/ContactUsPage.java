@@ -36,9 +36,9 @@ public class ContactUsPage extends PageObject {
         contactUsButton.click();
     }
 
-    public void displayMessage() {
-        System.out.println(message.getText());
-
+    public String displayMessage() {
+        return message.getText();
     }
+
 
 }

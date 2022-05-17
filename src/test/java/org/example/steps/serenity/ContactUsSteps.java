@@ -2,6 +2,7 @@ package org.example.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import org.example.pages.ContactUsPage;
+import org.junit.Assert;
 
 public class ContactUsSteps {
 
@@ -33,8 +34,9 @@ public class ContactUsSteps {
     }
 
     @Step
-    public void displayMessage() {
-        contactUsPage.displayMessage();
+    public void checkMessage() {
+        String message = contactUsPage.displayMessage();
+        Assert.assertNotEquals("The message should be one of success","Cannot send your request!",message);
     }
 
     public void contactUs(String subject, String description) throws InterruptedException {
@@ -42,7 +44,7 @@ public class ContactUsSteps {
         enterDescription(description);
         submit();
         Thread.sleep(1000);
-        displayMessage();
+        checkMessage();
     }
 
 
