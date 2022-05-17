@@ -24,9 +24,8 @@ public class AddBuildingPage extends PageObject {
     }
 
     public void submit() {
-        WebElementFacade addBuilding = find(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained jss502 MuiButton-containedPrimary']"));
-        addBuilding.waitUntilEnabled().click();
-//        addBuilding.click();
+        WebElementFacade addBuilding = find(By.xpath("//div[@class='MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end']")).then(By.xpath("//div[@class='MuiGrid-root MuiGrid-item']"));
+        addBuilding.click();
     }
 
     public void clickAddBuilding() {
