@@ -5,7 +5,7 @@ import org.example.features.BaseStory;
 import org.example.steps.serenity.EditBuildingSteps;
 import org.junit.Test;
 
-public class BuildingsStory extends BaseStory {
+public class EditBuildingsStory extends BaseStory {
 
     @Steps
     private EditBuildingSteps editBuildingSteps;
