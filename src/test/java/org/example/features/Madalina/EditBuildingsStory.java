@@ -18,6 +18,8 @@ public class EditBuildingsStory extends BaseStory {
         editBuildingSteps.isTheBuildingPage();
         Thread.sleep(2000);
         editBuildingSteps.SaveNewBuildingInformation("NameEditedBuilding","100000");
+        System.out.println(editBuildingSteps.getNameOfEditedBuilding());
+        assert(editBuildingSteps.getNameOfEditedBuilding().equals("NameEditedBuilding"));
 
     }
 }

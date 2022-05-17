@@ -49,4 +49,9 @@ public class EditBuildingSteps {
 
     }
 
+    public String getNameOfEditedBuilding(){
+        return page.getName();
+    }
+
+
 }

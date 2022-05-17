@@ -49,4 +49,11 @@ public class BuildingsPage extends PageObject {
         saveEditedDataButton.click();
     }
 
+    public String getName(){
+       WebElementFacade name=find(By.cssSelector("td.MuiTableCell-alignLeft")).then(By.cssSelector("p"));
+       return name.getText();
+    }
+
+
+
 }
