@@ -33,6 +33,7 @@ public class LoginSteps {
     @Step
     protected void popupLogin() {
         try {
+            Thread.sleep(2000);
             Robot robot = new Robot();
             robot.keyPress(KeyEvent.VK_L);
             robot.keyRelease(KeyEvent.VK_L);
@@ -84,6 +85,9 @@ public class LoginSteps {
             robot.keyRelease(KeyEvent.VK_ENTER);
         } catch (AWTException exception){
             System.out.println("Robot exception");
+        }
+        catch (InterruptedException exp){
+
         }
     }
 
