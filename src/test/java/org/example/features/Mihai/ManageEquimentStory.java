@@ -1,10 +1,11 @@
-package org.example.features;
+package org.example.features.Mihai;
 
 import net.thucydides.core.annotations.Steps;
+import org.example.features.BaseStory;
 import org.example.steps.serenity.ManageEquipmentSteps;
 import org.junit.Test;
 
-public class ManageEquimentStory extends BaseStory{
+public class ManageEquimentStory extends BaseStory {
 
     @Steps
     private ManageEquipmentSteps manageEquipmentSteps;
