@@ -7,6 +7,6 @@ public class LoginStory extends BaseStory {
     @Test
     public void login() {
         loginSteps.isTheLoginPage();
-        loginSteps.login("adelinmihoc@gmail.com", "X9zfxhZeU6Py9WD");
+        loginSteps.login("mihaimehi@gmail.com", "Samsungs10!");
     }
 }

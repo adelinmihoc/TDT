@@ -34,6 +34,7 @@ public class LoginSteps {
     protected void popupLogin() {
         try {
             Thread.sleep(2000);
+
             Robot robot = new Robot();
             robot.keyPress(KeyEvent.VK_L);
             robot.keyRelease(KeyEvent.VK_L);
